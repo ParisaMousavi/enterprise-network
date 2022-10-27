@@ -9,11 +9,18 @@ variable "region_shortname" {
 }
 
 variable "name" {
-  type    = string
-  default = null
+  description = "Project name"
+  type        = string
+  default     = "myproje"
 }
 
 variable "prefix" {
-  type = string
-  default = "enterprise"
+  description = "Team name"
+  type        = string
+  default     = "enterprise"
+}
+
+variable "costcenter" {
+  type    = string
+  default = "dummyXYZ"
 }

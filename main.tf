@@ -42,7 +42,18 @@ locals {
         availability_zone = "eu-central-1b"
         cidr_block        = "10.101.4.0/24"
         name              = "${module.name.snet_name}-public-2"
-    } },
+      },
+      "eks_1" = {
+        availability_zone = "eu-central-1b"
+        cidr_block        = "10.101.5.0/24"
+        name              = "${module.name.snet_name}-eks-1"
+      },
+      "eks_2" = {
+        availability_zone = "eu-central-1b"
+        cidr_block        = "10.101.6.0/24"
+        name              = "${module.name.snet_name}-eks-2"
+      }
+    },
     "acc" = {
       "public_1" = {
         availability_zone = "eu-central-1a"
@@ -59,7 +70,7 @@ locals {
 }
 
 module "name" {
-  source           = "github.com/ParisaMousavi/aws-naming"
+  source           = "github.com/ParisaMousavi/aws-naming?ref=main"
   prefix           = var.prefix
   name             = var.name
   environment      = var.environment
@@ -67,7 +78,7 @@ module "name" {
 }
 
 module "network" {
-  source               = "github.com/ParisaMousavi/aws-vpc-v2"
+  source               = "github.com/ParisaMousavi/aws-vpc-v2?ref=main"
   cidr_block           = local.vpc_cidr_block[lower(var.environment)]
   enable_dns_support   = true
   enable_dns_hostnames = true
