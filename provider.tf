@@ -6,8 +6,8 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "terraform-myproje-euc1-dev"
-    key    = "network/terraform.tfstate"
+    bucket = "tname-myproje-terraform-dev-euc1"
+    key    = "enterprise-network/terraform.tfstate"
     region = "eu-central-1"
   }
 }

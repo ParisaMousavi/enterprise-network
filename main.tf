@@ -44,7 +44,7 @@ locals {
         name              = "${module.name.snet_name}-public-2"
       },
       "eks_1" = {
-        availability_zone = "eu-central-1b"
+        availability_zone = "eu-central-1a"
         cidr_block        = "10.101.5.0/24"
         name              = "${module.name.snet_name}-eks-1"
       },
