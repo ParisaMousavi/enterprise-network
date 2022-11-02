@@ -34,36 +34,42 @@ locals {
   public_subnets = {
     "dev" = {
       "public_1" = {
-        availability_zone = "eu-central-1a"
-        cidr_block        = "10.101.3.0/24"
-        name              = "${module.name.snet_name}-public-1"
+        availability_zone       = "eu-central-1a"
+        cidr_block              = "10.101.3.0/24"
+        name                    = "${module.name.snet_name}-public-1"
+        map_public_ip_on_launch = true
       },
       "public_2" = {
-        availability_zone = "eu-central-1b"
-        cidr_block        = "10.101.4.0/24"
-        name              = "${module.name.snet_name}-public-2"
+        availability_zone       = "eu-central-1b"
+        cidr_block              = "10.101.4.0/24"
+        name                    = "${module.name.snet_name}-public-2"
+        map_public_ip_on_launch = true
       },
       "eks_1" = {
-        availability_zone = "eu-central-1a"
-        cidr_block        = "10.101.5.0/24"
-        name              = "${module.name.snet_name}-eks-1"
+        availability_zone       = "eu-central-1a"
+        cidr_block              = "10.101.5.0/24"
+        name                    = "${module.name.snet_name}-eks-1"
+        map_public_ip_on_launch = true
       },
       "eks_2" = {
-        availability_zone = "eu-central-1b"
-        cidr_block        = "10.101.6.0/24"
-        name              = "${module.name.snet_name}-eks-2"
+        availability_zone       = "eu-central-1b"
+        cidr_block              = "10.101.6.0/24"
+        name                    = "${module.name.snet_name}-eks-2"
+        map_public_ip_on_launch = true
       }
     },
     "acc" = {
       "public_1" = {
-        availability_zone = "eu-central-1a"
-        cidr_block        = "10.102.3.0/24"
-        name              = "${module.name.snet_name}-public-1"
+        availability_zone       = "eu-central-1a"
+        cidr_block              = "10.102.3.0/24"
+        name                    = "${module.name.snet_name}-public-1"
+        map_public_ip_on_launch = true
       },
       "public_2" = {
-        availability_zone = "eu-central-1b"
-        cidr_block        = "10.102.4.0/24"
-        name              = "${module.name.snet_name}-public-2"
+        availability_zone       = "eu-central-1b"
+        cidr_block              = "10.102.4.0/24"
+        name                    = "${module.name.snet_name}-public-2"
+        map_public_ip_on_launch = true
       }
     }
   }
