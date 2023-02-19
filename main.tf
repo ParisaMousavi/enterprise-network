@@ -56,6 +56,12 @@ locals {
         cidr_block              = "10.101.6.0/24"
         name                    = "${module.name.snet_name}-eks-2"
         map_public_ip_on_launch = true
+      },
+      "ec2s" = {
+        availability_zone       = "eu-central-1b"
+        cidr_block              = "10.101.7.0/24"
+        name                    = "${module.name.snet_name}-ec2s"
+        map_public_ip_on_launch = true
       }
     },
     "acc" = {
