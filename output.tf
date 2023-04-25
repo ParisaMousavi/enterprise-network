@@ -14,6 +14,6 @@ output "vpc_arn" {
   value = module.network.vpc_arn
 }
 
-output "public_subnet_ids" {
-  value = module.network.public_subnet_ids
+output "private_subnet_ids" {
+  value = module.network.private_subnet_ids
 }
