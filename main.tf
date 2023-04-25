@@ -103,6 +103,3 @@ module "network" {
   }
 }
 
-output "network" {
-  value = module.network
-}
